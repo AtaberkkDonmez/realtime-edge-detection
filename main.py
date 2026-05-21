@@ -33,7 +33,6 @@ while True:
     2
 )
 
-
     cv2.imshow("Edge Detection", edges)
 
 
