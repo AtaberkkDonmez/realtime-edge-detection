@@ -22,7 +22,7 @@ while cap.isOpened():
 
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
 
-    _, thresh = cv2.threshold(blur, 20, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(blur, 35, 255, cv2.THRESH_BINARY)
 
     dilated = cv2.dilate(thresh, None, iterations=3)
 
