@@ -2,8 +2,9 @@
 
 ## English
 
-A real-time computer vision project developed using Python and OpenCV.  
-The project started with edge detection and evolved into a motion tracking system with state-based logic.
+A real-time computer vision project developed using Python and OpenCV.
+
+The project initially started as a basic edge detection application and gradually evolved into a persistent multi-object motion tracking system with real-time processing and background subtraction techniques.
 
 ---
 
@@ -17,13 +18,28 @@ The project started with edge detection and evolved into a motion tracking syste
 - FPS counter
 - Screenshot capture
 
-### Version 2 (Updated)
+---
+
+### Version 2
 - Frame differencing based motion detection
 - Contour-based object detection
 - Bounding box visualization
-- Centroid (object center) tracking
+- Centroid tracking
 - Motion trail visualization
-- State-based motion handling (prevents artifact accumulation)
+- State-based motion handling
+
+---
+
+### Version 3 (Current)
+- Background subtraction based motion segmentation
+- Persistent multi-object tracking
+- Object ID assignment
+- Centroid distance matching
+- Noise filtering
+- False positive reduction
+- Camera motion rejection attempts
+- Real-time FPS monitoring
+- Real-time object localization
 
 ---
 
@@ -39,38 +55,46 @@ The project started with edge detection and evolved into a motion tracking syste
 
 ```bash
 pip install -r requirements.txt
-python3 main.py
+python3 motion_detection.py
 ```
 
 ---
 
 ## Controls
 
-- Press `s` → save screenshot
-- Press `q` → quit program
+- Press `q` → quit application
 
 ---
 
 ## Project Purpose
 
-This project was developed to explore real-time computer vision concepts and build an understanding of vision pipelines used in embedded and defense-related systems.
-
-### Covered Concepts:
-- Frame processing pipelines
-- Edge detection techniques
-- Motion detection using frame differencing
-- Object localization and tracking
-- Temporal state management in vision systems
-- Real-time performance monitoring (FPS)
+This project was developed to explore real-time computer vision pipelines and understand the fundamentals of motion analysis, object tracking, and image processing systems used in embedded and defense-related applications.
 
 ---
 
-# Gerçek Zamanlı Bilgisayarlı Görü
+## Covered Concepts
+
+- Real-time frame processing
+- Edge detection
+- Image preprocessing
+- Motion segmentation
+- Background subtraction
+- Contour extraction
+- Object localization
+- Persistent object tracking
+- Centroid-based tracking logic
+- False positive reduction
+- Real-time FPS analysis
+
+---
+
+# Gerçek Zamanlı Bilgisayarlı Görü Pipeline Sistemi
 
 ## Türkçe
 
-Python ve OpenCV kullanılarak geliştirilmiş gerçek zamanlı bilgisayarlı görü projesidir.  
-Proje ilk olarak kenar tespiti ile başlamış, daha sonra hareket takibi içeren bir sisteme dönüştürülmüştür.
+Python ve OpenCV kullanılarak geliştirilmiş gerçek zamanlı bilgisayarlı görü projesidir.
+
+Proje başlangıçta basit bir kenar tespiti uygulaması olarak geliştirilmiş, daha sonra gerçek zamanlı persistent multi-object tracking sistemine dönüştürülmüştür.
 
 ---
 
@@ -84,13 +108,28 @@ Proje ilk olarak kenar tespiti ile başlamış, daha sonra hareket takibi içere
 - FPS sayacı
 - Ekran görüntüsü alma
 
-### Sürüm 2 (Güncellenmiş)
+---
+
+### Sürüm 2
 - Frame differencing ile hareket algılama
 - Kontur tabanlı nesne tespiti
 - Bounding box çizimi
-- Merkez (centroid) takibi
+- Centroid takibi
 - Hareket izi görselleştirme
-- State-based (durum bazlı) iz yönetimi
+- State-based hareket yönetimi
+
+---
+
+### Sürüm 3 (Güncel)
+- Background subtraction tabanlı hareket segmentasyonu
+- Persistent multi-object tracking
+- Nesne ID atama sistemi
+- Centroid distance matching
+- Gürültü filtreleme
+- False positive azaltma
+- Kamera hareketi filtreleme denemeleri
+- Gerçek zamanlı FPS takibi
+- Gerçek zamanlı nesne konumlandırma
 
 ---
 
@@ -106,26 +145,33 @@ Proje ilk olarak kenar tespiti ile başlamış, daha sonra hareket takibi içere
 
 ```bash
 pip install -r requirements.txt
-python3 main.py
+python3 motion_detection.py
 ```
 
 ---
 
 ## Kontroller
 
-- `s` tuşu → ekran görüntüsü kaydet
-- `q` tuşu → programdan çık
+- `q` tuşu → uygulamadan çık
 
 ---
 
 ## Projenin Amacı
 
-Bu proje gerçek zamanlı bilgisayarlı görü sistemlerini anlamak ve özellikle savunma sanayi ve gömülü sistemlerde kullanılan görüntü işleme pipeline mantığını öğrenmek amacıyla geliştirilmiştir.
+Bu proje gerçek zamanlı bilgisayarlı görü pipeline sistemlerini anlamak ve özellikle gömülü sistemler ile savunma sanayi uygulamalarında kullanılan motion analysis ve object tracking mantığını öğrenmek amacıyla geliştirilmiştir.
 
-### Öğrenilen Konular:
-- Frame processing pipeline
-- Kenar tespiti algoritmaları
-- Hareket algılama
-- Nesne konumlandırma ve takip
-- Görüntü sistemlerinde state management
-- Gerçek zamanlı performans analizi (FPS)
+---
+
+## Öğrenilen Konular
+
+- Gerçek zamanlı frame işleme
+- Kenar tespiti
+- Görüntü ön işleme
+- Motion segmentation
+- Background subtraction
+- Contour extraction
+- Nesne konumlandırma
+- Persistent object tracking
+- Centroid tabanlı tracking mantığı
+- False positive azaltma
+- Gerçek zamanlı FPS analizi
