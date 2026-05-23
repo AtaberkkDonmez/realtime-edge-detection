@@ -1,10 +1,12 @@
-# Real-Time Computer Vision Pipeline
+# Real-Time AI Security Tracking System
 
 ## English
 
-A real-time computer vision project developed using Python and OpenCV.
+A real-time AI-assisted computer vision and security tracking system developed using Python, OpenCV, and YOLOv8.
 
-The project initially started as a basic edge detection application and gradually evolved into a persistent multi-object motion tracking system with real-time processing and background subtraction techniques.
+The project initially started as a basic edge detection experiment and gradually evolved into a real-time human detection and persistent tracking pipeline using deep learning-based object detection techniques.
+
+The system performs real-time person detection, multi-object tracking, intrusion monitoring, and trajectory visualization.
 
 ---
 
@@ -30,16 +32,29 @@ The project initially started as a basic edge detection application and graduall
 
 ---
 
-### Version 3 (Current)
+### Version 3
 - Background subtraction based motion segmentation
 - Persistent multi-object tracking
 - Object ID assignment
-- Centroid distance matching
 - Noise filtering
 - False positive reduction
 - Camera motion rejection attempts
+
+---
+
+### Version 4 (Current)
+- YOLOv8 real-time object detection
+- Person-only tracking pipeline
+- Persistent multi-object tracking using BoT-SORT
+- Stable object ID assignment
+- Trajectory visualization
+- Restricted area monitoring
+- Intrusion detection system
+- Real-time confidence visualization
+- Dynamic tracking buffer configuration
 - Real-time FPS monitoring
-- Real-time object localization
+- Unique ID session tracking
+- Color-based ID visualization
 
 ---
 
@@ -47,7 +62,10 @@ The project initially started as a basic edge detection application and graduall
 
 - Python
 - OpenCV
+- YOLOv8 (Ultralytics)
 - NumPy
+- BoT-SORT Tracker
+- PyYAML
 
 ---
 
@@ -55,20 +73,35 @@ The project initially started as a basic edge detection application and graduall
 
 ```bash
 pip install -r requirements.txt
-python3 motion_detection.py
+python3 yolo_tracking.py
 ```
 
 ---
 
 ## Controls
 
-- Press `q` → quit application
+- `q` → quit application
+
+---
+
+## System Capabilities
+
+The system can:
+
+- Detect humans in real-time
+- Track multiple people simultaneously
+- Assign persistent IDs to detected people
+- Visualize movement trajectories
+- Monitor restricted areas
+- Trigger intrusion warnings
+- Maintain tracking consistency using BoT-SORT
+- Display real-time FPS and tracking statistics
 
 ---
 
 ## Project Purpose
 
-This project was developed to explore real-time computer vision pipelines and understand the fundamentals of motion analysis, object tracking, and image processing systems used in embedded and defense-related applications.
+This project was developed to explore real-time AI-assisted computer vision pipelines and understand the core concepts behind object detection, tracking systems, and surveillance applications used in embedded, robotics, and defense-related systems.
 
 ---
 
@@ -76,25 +109,30 @@ This project was developed to explore real-time computer vision pipelines and un
 
 - Real-time frame processing
 - Edge detection
-- Image preprocessing
 - Motion segmentation
-- Background subtraction
-- Contour extraction
-- Object localization
+- Object detection
+- Deep learning inference
 - Persistent object tracking
-- Centroid-based tracking logic
+- Trajectory analysis
+- Multi-object tracking
+- Background subtraction
 - False positive reduction
-- Real-time FPS analysis
+- Intrusion detection systems
+- Real-time performance analysis
+- Tracking buffer management
+- Region-of-interest (ROI) monitoring
 
 ---
 
-# Gerçek Zamanlı Bilgisayarlı Görü Pipeline Sistemi
+# Gerçek Zamanlı Yapay Zeka Destekli Güvenlik Takip Sistemi
 
 ## Türkçe
 
-Python ve OpenCV kullanılarak geliştirilmiş gerçek zamanlı bilgisayarlı görü projesidir.
+Python, OpenCV ve YOLOv8 kullanılarak geliştirilmiş gerçek zamanlı yapay zeka destekli bilgisayarlı görü ve güvenlik takip sistemidir.
 
-Proje başlangıçta basit bir kenar tespiti uygulaması olarak geliştirilmiş, daha sonra gerçek zamanlı persistent multi-object tracking sistemine dönüştürülmüştür.
+Proje başlangıçta basit bir kenar tespiti denemesi olarak geliştirilmiş, daha sonra derin öğrenme tabanlı insan tespiti ve persistent tracking sistemi haline dönüştürülmüştür.
+
+Sistem gerçek zamanlı insan tespiti, çoklu nesne takibi, intrusion monitoring ve trajectory visualization işlemleri gerçekleştirmektedir.
 
 ---
 
@@ -120,16 +158,29 @@ Proje başlangıçta basit bir kenar tespiti uygulaması olarak geliştirilmiş,
 
 ---
 
-### Sürüm 3 (Güncel)
+### Sürüm 3
 - Background subtraction tabanlı hareket segmentasyonu
 - Persistent multi-object tracking
-- Nesne ID atama sistemi
-- Centroid distance matching
+- Nesne ID sistemi
 - Gürültü filtreleme
 - False positive azaltma
 - Kamera hareketi filtreleme denemeleri
-- Gerçek zamanlı FPS takibi
-- Gerçek zamanlı nesne konumlandırma
+
+---
+
+### Sürüm 4 (Güncel)
+- YOLOv8 gerçek zamanlı nesne tespiti
+- Sadece insan takibi yapan pipeline
+- BoT-SORT tabanlı persistent tracking
+- Stabil object ID sistemi
+- Trajectory visualization
+- Restricted area monitoring
+- Intrusion detection sistemi
+- Gerçek zamanlı confidence gösterimi
+- Dinamik tracking buffer yönetimi
+- FPS takibi
+- Unique ID session tracking
+- ID bazlı renk sistemi
 
 ---
 
@@ -137,7 +188,10 @@ Proje başlangıçta basit bir kenar tespiti uygulaması olarak geliştirilmiş,
 
 - Python
 - OpenCV
+- YOLOv8 (Ultralytics)
 - NumPy
+- BoT-SORT Tracker
+- PyYAML
 
 ---
 
@@ -145,7 +199,7 @@ Proje başlangıçta basit bir kenar tespiti uygulaması olarak geliştirilmiş,
 
 ```bash
 pip install -r requirements.txt
-python3 motion_detection.py
+python3 yolo_tracking.py
 ```
 
 ---
@@ -156,9 +210,24 @@ python3 motion_detection.py
 
 ---
 
+## Sistem Yetenekleri
+
+Sistem:
+
+- Gerçek zamanlı insan tespiti yapabilir
+- Aynı anda birden fazla insanı takip edebilir
+- Her insan için persistent ID oluşturabilir
+- Hareket geçmişini görselleştirebilir
+- Restricted area kontrolü yapabilir
+- Intrusion warning üretebilir
+- BoT-SORT ile tracking stabilitesini artırabilir
+- FPS ve tracking istatistiklerini gösterebilir
+
+---
+
 ## Projenin Amacı
 
-Bu proje gerçek zamanlı bilgisayarlı görü pipeline sistemlerini anlamak ve özellikle gömülü sistemler ile savunma sanayi uygulamalarında kullanılan motion analysis ve object tracking mantığını öğrenmek amacıyla geliştirilmiştir.
+Bu proje gerçek zamanlı yapay zeka destekli bilgisayarlı görü pipeline sistemlerini öğrenmek ve özellikle gömülü sistemler, robotik ve savunma sanayi uygulamalarında kullanılan object detection ve tracking sistemlerinin temel mantığını anlamak amacıyla geliştirilmiştir.
 
 ---
 
@@ -166,12 +235,15 @@ Bu proje gerçek zamanlı bilgisayarlı görü pipeline sistemlerini anlamak ve 
 
 - Gerçek zamanlı frame işleme
 - Kenar tespiti
-- Görüntü ön işleme
 - Motion segmentation
-- Background subtraction
-- Contour extraction
-- Nesne konumlandırma
+- Object detection
+- Deep learning inference
 - Persistent object tracking
-- Centroid tabanlı tracking mantığı
+- Trajectory analysis
+- Multi-object tracking
+- Background subtraction
 - False positive azaltma
-- Gerçek zamanlı FPS analizi
+- Intrusion detection sistemleri
+- Gerçek zamanlı performans analizi
+- Tracking buffer yönetimi
+- ROI (Region of Interest) monitoring
